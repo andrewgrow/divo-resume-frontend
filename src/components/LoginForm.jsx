@@ -16,9 +16,9 @@ function LoginForm({ onLoginSuccess }) {
 
     return (
         <div className="login-form-container">
-            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+            <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
                 <input
-                    className="rounded px-3 py-2 border border-gray-300 focus:outline-none focus:ring focus:ring-indigo-300"
+                    className="rounded px-5 py-2 border border-gray-300 focus:outline-none focus:ring focus:ring-indigo-300"
                     type="text"
                     placeholder="Login"
                     value={login}
@@ -26,7 +26,7 @@ function LoginForm({ onLoginSuccess }) {
                     required
                 />
                 <input
-                    className="rounded px-3 py-2 border border-gray-300 focus:outline-none focus:ring focus:ring-indigo-300"
+                    className="rounded px-5 py-2 border border-gray-300 focus:outline-none focus:ring focus:ring-indigo-300"
                     type="password"
                     placeholder="Password"
                     value={password}

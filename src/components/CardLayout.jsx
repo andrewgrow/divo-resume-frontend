@@ -2,12 +2,12 @@
 
 function CardLayout({ children }) {
     return (
-        <div className="min-h-screen flex items-center justify-center">
-            <div className="bg-white/80 rounded-lg shadow-2xl p-8 max-w-5xl mt-20 mb-20 mx-1 ">
+        <div className="min-h-screen flex items-center justify-center bg-transparent">
+            <div className="w-full max-w-6xl shadow-2xl mt-20 mb-20 mx-1 overflow-hidden rounded-lg">
                 {children}
             </div>
         </div>
     )
-};
+}
 
 export default CardLayout;
