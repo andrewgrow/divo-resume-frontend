@@ -1,4 +1,4 @@
-// /src/LoginForm.jsx
+// /src/components/LoginForm.jsx
 
 import {useState} from "react";
 

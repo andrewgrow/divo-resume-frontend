@@ -1,4 +1,4 @@
-// /src/Dashboard.jsx
+// /src/components/Dashboard.jsx
 
 function Dashboard() {
     return (
