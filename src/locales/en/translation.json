@@ -1,0 +1,12 @@
+{
+  "filePath": "./src/locales/en/translation.json",
+  "loginTitle": "Log in to continue",
+  "loginHint": "Email or phone",
+  "login": "Login",
+  "password": "Password",
+  "projectName": "Divo Resume",
+  "description": "AI-powered toolchain to improve your CV for every vacancy you want.",
+  "dashboardTitle": "Dashboard",
+  "notFoundTitle": "Error 404",
+  "notFoundDescription": "Sorry, the page was not found. Maybe it doesn't exist or the address is incorrect."
+}

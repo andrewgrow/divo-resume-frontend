@@ -1,0 +1,12 @@
+{
+  "filePath": "./src/locales/pl/translation.json",
+  "loginTitle": "Zaloguj się, aby kontynuować",
+  "loginHint": "E-mail lub telefon",
+  "login": "Zaloguj się",
+  "password": "Hasło",
+  "projectName": "Divo Resume",
+  "description": "Zestaw narzędzi oparty na AI do ulepszania Twojego CV pod każdą wybraną ofertę pracy.",
+  "dashboardTitle": "Panel zarządzania",
+  "notFoundTitle": "Błąd 404",
+  "notFoundDescription": "Przepraszamy, nie znaleziono strony. Być może nie istnieje lub adres jest nieprawidłowy."
+}

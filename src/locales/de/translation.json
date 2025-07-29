@@ -1,0 +1,12 @@
+{
+  "filePath": "./src/locales/de/translation.json",
+  "loginTitle": "Melden Sie sich an, um fortzufahren",
+  "loginHint": "E-Mail oder Telefon",
+  "login": "Anmelden",
+  "password": "Passwort",
+  "projectName": "Divo Resume",
+  "description": "KI-gestützte Toolchain zur Optimierung Ihres Lebenslaufs für jede gewünschte Stelle.",
+  "dashboardTitle": "Verwaltungsübersicht",
+  "notFoundTitle": "Fehler 404",
+  "notFoundDescription": "Entschuldigung, die Seite wurde nicht gefunden. Vielleicht existiert sie nicht oder die Adresse ist falsch."
+}
