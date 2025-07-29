@@ -37,7 +37,7 @@ function App() {
                     path="/dashboard"
                     element={
                         isLoggedIn ? (
-                            <CardLayout>
+                            <CardLayout bg="bg-white">
                                 <Dashboard/>
                             </CardLayout>
                         ) : (

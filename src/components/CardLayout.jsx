@@ -1,9 +1,9 @@
 // /src/components/CardLayout.jsx
 
-function CardLayout({ children }) {
+function CardLayout({ children, bg = "bg-transparent" }) {
     return (
         <div className="min-h-screen flex items-center justify-center bg-transparent">
-            <div className="w-full max-w-6xl shadow-2xl mt-20 mb-20 mx-1 overflow-hidden rounded-lg bg-white">
+            <div className={`w-full max-w-6xl shadow-2xl mt-20 mb-20 mx-1 overflow-hidden rounded-lg ${bg}`}>
                 {children}
             </div>
         </div>
