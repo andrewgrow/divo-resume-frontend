@@ -4,15 +4,18 @@ import {useState} from "react";
 import Dashboard from "./components/Dashboard.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import CardLayout from "./components/CardLayout.jsx";
-import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import NotFoundPage from "./pages/NotFound.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
-    // Временная логика: если есть токен — “авторизован”, иначе нет
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [lang, setLang] = useState("en");
+    { console.log("App main recreate"); }
 
     return (
-        <BrowserRouter>
+        <>
+            <Navbar currentLang={lang} onLangChange={setLang}/>
             <Routes>
                 {/* Login page */}
                 <Route
@@ -21,10 +24,10 @@ function App() {
                         <CardLayout>
                             <LoginPage
                                 onLoginSuccess={
-                                () => {
-                                    setIsLoggedIn(true);
-                                }
-                            } />
+                                    () => {
+                                        setIsLoggedIn(true);
+                                    }
+                                }/>
                         </CardLayout>
                     }
                 />
@@ -35,10 +38,10 @@ function App() {
                     element={
                         isLoggedIn ? (
                             <CardLayout>
-                                <Dashboard />
+                                <Dashboard/>
                             </CardLayout>
                         ) : (
-                            <Navigate to="/login" replace />
+                            <Navigate to="/login" replace/>
                         )
                     }
                 />
@@ -47,7 +50,7 @@ function App() {
                 <Route
                     path="/"
                     element={
-                        <Navigate to={isLoggedIn ? "/dashboard" : "/login"} replace />
+                        <Navigate to={isLoggedIn ? "/dashboard" : "/login"} replace/>
                     }
                 />
 
@@ -55,10 +58,10 @@ function App() {
                 <Route
                     path="*"
                     element={
-                    <NotFoundPage />
-                } />
+                        <NotFoundPage/>
+                    }/>
             </Routes>
-        </BrowserRouter>
+        </>
     )
 }
 

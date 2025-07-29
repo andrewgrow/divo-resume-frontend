@@ -25,9 +25,9 @@ function LoginPage({ onLoginSuccess }) {
 
             {/* Right Panel */}
             <div className="flex-1 items-center justify-center bg-white">
-                <div className="p-12">
-                    <h2 className="text-2xl font-bold mb-6 text-indigo-900 text-center">
-                        Sign in to Divo Resume
+                <div className="p-16">
+                    <h2 className="text-2xl font-bold mb-6 text-purple-500 text-center">
+                        Log in to continue
                     </h2>
                     <LoginForm onLoginSuccess={handleLogin} />
                 </div>
