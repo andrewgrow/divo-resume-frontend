@@ -2,17 +2,28 @@
 
 import {useState} from "react";
 import { useTranslation } from "react-i18next";
+import {setToken, setUserId} from "../utils/auth.js";
 
 function LoginForm({ onLoginSuccess }) {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const { t } = useTranslation();
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        // TODO: запрос к API, проверка, и т.д.
-        // Если всё хорошо:
-        onLoginSuccess();
+        const response = await fetch("/users/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ login, password }),
+        });
+        if (response.ok) {
+            const { userId, token } = await response.json();
+            setToken(token);
+            setUserId(userId);
+            onLoginSuccess();
+        } else {
+            // обработка ошибки
+        }
     }
 
 

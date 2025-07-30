@@ -8,10 +8,12 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import NotFoundPage from "./pages/NotFound.jsx";
 import Navbar from "./components/Navbar.jsx";
 import i18n from "i18next";
+import RequireAuth from "./components/RequireAuth.jsx";
+import {getToken, isTokenValid} from "./utils/auth.js";
 
 function App() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [lang, setLang] = useState(getInitialLang());
+    const isAuthenticated = isTokenValid(getToken());
 
     async function handleLangChange(selectedLang) {
         setLang(selectedLang);
@@ -34,12 +36,7 @@ function App() {
                     path="/login"
                     element={
                         <CardLayout>
-                            <LoginPage
-                                onLoginSuccess={
-                                    () => {
-                                        setIsLoggedIn(true);
-                                    }
-                                }/>
+                            <LoginPage onLoginSuccess={() => window.location.href = "/dashboard"} />
                         </CardLayout>
                     }
                 />
@@ -48,13 +45,11 @@ function App() {
                 <Route
                     path="/dashboard"
                     element={
-                        isLoggedIn ? (
+                        <RequireAuth>
                             <CardLayout bg="bg-white">
                                 <Dashboard/>
                             </CardLayout>
-                        ) : (
-                            <Navigate to="/login" replace/>
-                        )
+                        </RequireAuth>
                     }
                 />
 
@@ -62,7 +57,9 @@ function App() {
                 <Route
                     path="/"
                     element={
-                        <Navigate to={isLoggedIn ? "/dashboard" : "/login"} replace/>
+                        isAuthenticated
+                            ? <Navigate to="/dashboard" replace/>
+                            : <Navigate to="/login" replace/>
                     }
                 />
 
