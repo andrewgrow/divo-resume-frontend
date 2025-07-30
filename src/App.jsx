@@ -4,22 +4,29 @@ import {useEffect, useState} from "react";
 import Dashboard from "./components/Dashboard.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import CardLayout from "./components/CardLayout.jsx";
-import {Navigate, Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes, useNavigate} from "react-router-dom";
 import NotFoundPage from "./pages/NotFound.jsx";
 import Navbar from "./components/Navbar.jsx";
 import i18n from "i18next";
 import RequireAuth from "./components/RequireAuth.jsx";
-import {getToken, isTokenValid} from "./utils/auth.js";
+import {getToken, isTokenValid, removeToken, removeUserId} from "./utils/auth.js";
 
 function App() {
     const [lang, setLang] = useState(getInitialLang());
     const isAuthenticated = isTokenValid(getToken());
+    const navigate = useNavigate();
 
     async function handleLangChange(selectedLang) {
         setLang(selectedLang);
         await i18n.changeLanguage(selectedLang);
         localStorage.setItem("lang", selectedLang);
         document.documentElement.lang = selectedLang;
+    }
+
+    function handleLogout() {
+        removeToken();
+        removeUserId();
+        navigate("/login", { replace: true });
     }
 
     useEffect(() => {
@@ -46,7 +53,7 @@ function App() {
                     path="/dashboard"
                     element={
                         <RequireAuth>
-                            <CardLayout bg="bg-white">
+                            <CardLayout bg="bg-white" showLogout={isAuthenticated} onLogout={handleLogout}>
                                 <Dashboard/>
                             </CardLayout>
                         </RequireAuth>

@@ -3,6 +3,7 @@
 import {useState} from "react";
 import { useTranslation } from "react-i18next";
 import {setToken, setUserId} from "../utils/auth.js";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function LoginForm({ onLoginSuccess }) {
     const [login, setLogin] = useState("");
@@ -11,7 +12,7 @@ function LoginForm({ onLoginSuccess }) {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const response = await fetch("/users/login", {
+        const response = await fetch(`${API_URL}/users/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ login, password }),
@@ -22,7 +23,7 @@ function LoginForm({ onLoginSuccess }) {
             setUserId(userId);
             onLoginSuccess();
         } else {
-            // обработка ошибки
+            // handling errors
         }
     }
 
