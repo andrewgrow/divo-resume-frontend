@@ -2,6 +2,7 @@
 
 import { useNavigate } from "react-router-dom";
 import GiftIcon  from "./icons/GiftIcon.jsx";
+import DownChevronIcon from "./icons/DownChevronIcon.jsx";
 
 function Navbar({ currentLang, onLangChange }) {
     const navigate = useNavigate();
@@ -19,17 +20,20 @@ function Navbar({ currentLang, onLangChange }) {
             </div>
 
             {/* Right part: language selector */}
-            <div className="flex items-center gap-2">
+            <div className="relative flex items-center">
                 <select
                     value={currentLang}
                     onChange={e => onLangChange(e.target.value)}
-                    className="px-2 py-1 text-white focus:outline-none "
+                    className="appearance-none bg-transparent px-4 py-1 pr-8 rounded text-white focus:outline-none"
                 >
                     <option value="en">EN</option>
                     <option value="pl">PL</option>
                     <option value="de">DE</option>
                     <option value="ru">RU</option>
                 </select>
+                <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">
+                    <DownChevronIcon className="w-4 h-4 text-white" />
+                </span>
             </div>
         </header>
     )
