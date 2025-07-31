@@ -8,5 +8,8 @@
   "description": "KI-gestützte Toolchain zur Optimierung Ihres Lebenslaufs für jede gewünschte Stelle.",
   "dashboardTitle": "Verwaltungsübersicht",
   "notFoundTitle": "Fehler 404",
-  "notFoundDescription": "Entschuldigung, die Seite wurde nicht gefunden. Vielleicht existiert sie nicht oder die Adresse ist falsch."
+  "notFoundDescription": "Entschuldigung, die Seite wurde nicht gefunden. Vielleicht existiert sie nicht oder die Adresse ist falsch.",
+  "error400description": "Ungültige Anmeldedaten oder fehlende Angaben. Ihr Login sollte eine E-Mail-Adresse (user@example.com) oder eine Telefonnummer (+1234567890) sein.",
+  "error429description": "Zu viele Anmeldeversuche. Bitte versuchen Sie es später noch einmal.",
+  "backendDisconnectedErrorDescription": "Verbindung zum Backend-Server fehlgeschlagen. Es können Probleme auftreten."
 }
