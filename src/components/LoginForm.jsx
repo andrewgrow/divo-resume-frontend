@@ -70,7 +70,6 @@ function LoginForm({ onLoginSuccess }) {
                     placeholder={t("loginHint")}
                     value={login}
                     onChange={e => setLogin(e.target.value)}
-                    required
                     disabled={loading}
                 />
                 <input
@@ -82,7 +81,6 @@ function LoginForm({ onLoginSuccess }) {
                     placeholder={t("password")}
                     value={password}
                     onChange={e => setPassword(e.target.value)}
-                    required
                     disabled={loading}
                 />
                 <div className="text-red-500 text-sm text-center min-h-4">
