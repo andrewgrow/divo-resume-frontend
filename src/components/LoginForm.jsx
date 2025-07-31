@@ -6,6 +6,7 @@ import {setToken, setUserId} from "../utils/auth.js";
 import Spinner from "./Spinner.jsx";
 import {responseToUserFriendlyMessage} from "../utils/errorToUserFriendlyMessage.jsx";
 import {KNOWN_TRANSLATABLE_ERRORS} from "../constants.js";
+import {isValidEmail, isValidPhone} from "../utils/validator.js";
 const API_URL = import.meta.env.VITE_API_URL;
 
 function LoginForm({ onLoginSuccess }) {
@@ -19,6 +20,13 @@ function LoginForm({ onLoginSuccess }) {
         e.preventDefault();
         setLoading(true);
         setError(null);
+
+        if (!isValidEmail(login) && !isValidPhone(login)) {
+            setError({type: "t", key: "loginFormatError"});
+            setLoading(false);
+            return;
+        }
+
         try {
             const response = await fetch(`${API_URL}/users/login`, {
                 method: "POST",

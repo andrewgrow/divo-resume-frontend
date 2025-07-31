@@ -5,11 +5,12 @@
   "login": "Zaloguj się",
   "password": "Hasło",
   "projectName": "Divo Resume",
-  "description": "Zestaw narzędzi oparty na AI do ulepszania Twojego CV pod każdą wybraną ofertę pracy.",
+  "description": "Zestaw narzędzi oparty na AI do ulepszania Twojego CV pod każdą wybraną ofertę pracy",
   "dashboardTitle": "Panel zarządzania",
   "notFoundTitle": "Błąd 404",
-  "notFoundDescription": "Przepraszamy, nie znaleziono strony. Być może nie istnieje lub adres jest nieprawidłowy.",
-  "error400description": "Nieprawidłowe dane logowania lub brak danych. Twój login powinien być adresem e-mail (user@example.com) lub numerem telefonu (+1234567890).",
-  "error429description": "Zbyt wiele prób logowania. Spróbuj ponownie później.",
-  "backendDisconnectedErrorDescription": "Nie można połączyć się z serwerem. Mogą wystąpić problemy z działaniem aplikacji."
+  "notFoundDescription": "Przepraszamy, nie znaleziono strony. Być może nie istnieje lub adres jest nieprawidłowy",
+  "error400description": "Nieprawidłowe dane logowania lub brak danych",
+  "error429description": "Zbyt wiele prób logowania. Spróbuj ponownie później",
+  "backendDisconnectedErrorDescription": "Nie można połączyć się z serwerem. Mogą wystąpić problemy z działaniem aplikacji",
+  "loginFormatError": "Login powinien być adresem e-mail (user@example.com) lub numerem telefonu (+1234567890)."
 }
