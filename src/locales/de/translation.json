@@ -12,5 +12,6 @@
   "error400description": "Ungültige Anmeldedaten oder fehlende Angaben",
   "error429description": "Zu viele Anmeldeversuche. Bitte versuchen Sie es später noch einmal",
   "backendDisconnectedErrorDescription": "Verbindung zum Backend-Server fehlgeschlagen. Es können Probleme auftreten",
-  "loginFormatError": "Der Login muss eine E-Mail-Adresse (user@example.com) oder eine Telefonnummer (+1234567890) sein."
+  "loginFormatError": "Der Login muss eine E-Mail-Adresse (user@example.com) oder eine Telefonnummer (+1234567890) sein.",
+  "logoutTitle": "Abmelden"
 }

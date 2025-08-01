@@ -12,5 +12,6 @@
   "error400description": "Invalid credentials or missing data",
   "error429description": "Too many login attempts. Please try again later",
   "backendDisconnectedErrorDescription": "Could not connect to backend services. Some issues may occur",
-  "loginFormatError": "Your login should be an email (user@example.com) or a phone number (+1234567890)"
+  "loginFormatError": "Your login should be an email (user@example.com) or a phone number (+1234567890)",
+  "logoutTitle": "Logout"
 }
