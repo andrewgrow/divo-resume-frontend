@@ -13,5 +13,11 @@
   "error429description": "Zu viele Anmeldeversuche. Bitte versuchen Sie es später noch einmal",
   "backendDisconnectedErrorDescription": "Verbindung zum Backend-Server fehlgeschlagen. Es können Probleme auftreten",
   "loginFormatError": "Der Login muss eine E-Mail-Adresse (user@example.com) oder eine Telefonnummer (+1234567890) sein.",
-  "logoutTitle": "Abmelden"
+  "logoutTitle": "Abmelden",
+  "noAccountRegister": "Noch kein Konto? Jetzt registrieren",
+  "registerTitle": "Konto erstellen",
+  "passwordTooShort": "Passwort ist zu kurz",
+  "passwordsDontMatch": "Passwörter stimmen nicht überein",
+  "passwordConfirm": "Passwort bestätigen",
+  "register": "Registrieren"
 }

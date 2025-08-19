@@ -13,5 +13,11 @@
   "error429description": "Слишком много попыток входа. Пожалуйста, попробуйте позже",
   "backendDisconnectedErrorDescription": "Не удалось подключиться к серверу. Возможны проблемы с работой приложения",
   "loginFormatError": "Логин должен быть email (user@example.com) или номером телефона (+1234567890)",
-  "logoutTitle": "Выйти"
+  "logoutTitle": "Выйти",
+  "noAccountRegister": "Нет аккаунта? Зарегистрируйтесь",
+  "registerTitle": "Создайте аккаунт",
+  "passwordTooShort": "Пароль слишком короткий",
+  "passwordsDontMatch": "Пароли не совпадают",
+  "passwordConfirm": "Подтвердите пароль",
+  "register": "Зарегистрироваться"
 }

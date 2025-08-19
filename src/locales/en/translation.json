@@ -13,5 +13,11 @@
   "error429description": "Too many login attempts. Please try again later",
   "backendDisconnectedErrorDescription": "Could not connect to backend services. Some issues may occur",
   "loginFormatError": "Your login should be an email (user@example.com) or a phone number (+1234567890)",
-  "logoutTitle": "Logout"
+  "logoutTitle": "Logout",
+  "noAccountRegister": "No account? Register",
+  "registerTitle": "Create an account",
+  "passwordTooShort": "Password is too short",
+  "passwordsDontMatch": "Passwords do not match",
+  "passwordConfirm": "Confirm password",
+  "register": "Register"
 }

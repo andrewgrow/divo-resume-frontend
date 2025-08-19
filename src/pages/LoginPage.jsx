@@ -1,4 +1,4 @@
-// /src/pages/LoginPage.jsx
+// ./src/pages/LoginPage.jsx
 
 import LoginForm from "../components/LoginForm.jsx";
 import {useNavigate} from "react-router-dom";
@@ -9,8 +9,8 @@ function LoginPage({ onLoginSuccess }) {
     const { t } = useTranslation();
 
     function handleLogin() {
-        onLoginSuccess();
-        navigate("/");
+        if (typeof onLoginSuccess === "function") onLoginSuccess();
+        navigate("/dashboard", { replace: true });
     }
 
     return (
@@ -30,12 +30,13 @@ function LoginPage({ onLoginSuccess }) {
             {/* Right Panel */}
             <div className="flex-1 items-center justify-center bg-white">
                 <div className="p-16">
-                    <h2 className="text-2xl font-bold mb-6 text-purple-500 text-center">
+                    <h2 className="text-2xl font-bold mb-6 text-purple-500 dark:text-purple-500 text-center">
                         {t("loginTitle")} {/* Log in to continue */}
                     </h2>
                     <LoginForm onLoginSuccess={handleLogin} />
                 </div>
             </div>
+
         </div>
     );
 

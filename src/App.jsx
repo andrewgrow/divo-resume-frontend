@@ -10,6 +10,7 @@ import i18n from "i18next";
 import RequireAuth from "./components/RequireAuth.jsx";
 import {getToken, isTokenValid} from "./utils/auth.js";
 import Dashboard from "./components/Dashboard.jsx";
+import RegisterPage from "./pages/RegisterPage.jsx";
 
 function App() {
     const [lang, setLang] = useState(getInitialLang());
@@ -17,7 +18,6 @@ function App() {
 
     async function handleLangChange(selectedLang) {
         setLang(selectedLang);
-        await i18n.changeLanguage(selectedLang);
         localStorage.setItem("lang", selectedLang);
         document.documentElement.lang = selectedLang;
     }
@@ -36,7 +36,17 @@ function App() {
                     path="/login"
                     element={
                         <CardLayout>
-                            <LoginPage onLoginSuccess={() => window.location.href = "/dashboard"} />
+                            <LoginPage />
+                        </CardLayout>
+                    }
+                />
+
+                {/* Registration page */}
+                <Route
+                    path="/register"
+                    element={
+                        <CardLayout>
+                            <RegisterPage />
                         </CardLayout>
                     }
                 />
