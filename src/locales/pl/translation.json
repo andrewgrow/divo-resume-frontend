@@ -19,5 +19,9 @@
   "passwordTooShort": "Hasło jest zbyt krótkie",
   "passwordsDontMatch": "Hasła nie są takie same",
   "passwordConfirm": "Potwierdź hasło",
-  "register": "Zarejestruj się"
+  "register": "Zarejestruj się",
+  "navDashboard": "Panel zarządzania",
+  "navResumes": "CV",
+  "navJobs": "Wakaty",
+  "navAccount": "Konto"
 }

@@ -19,5 +19,9 @@
   "passwordTooShort": "Password is too short",
   "passwordsDontMatch": "Passwords do not match",
   "passwordConfirm": "Confirm password",
-  "register": "Register"
+  "register": "Register",
+  "navDashboard": "Dashboard",
+  "navResumes": "Resumes",
+  "navJobs": "Jobs",
+  "navAccount": "Account"
 }

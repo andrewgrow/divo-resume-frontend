@@ -19,5 +19,9 @@
   "passwordTooShort": "Пароль слишком короткий",
   "passwordsDontMatch": "Пароли не совпадают",
   "passwordConfirm": "Подтвердите пароль",
-  "register": "Зарегистрироваться"
+  "register": "Зарегистрироваться",
+  "navDashboard": "Панель управления",
+  "navResumes": "Резюме",
+  "navJobs": "Вакансии",
+  "navAccount": "Аккаунт"
 }

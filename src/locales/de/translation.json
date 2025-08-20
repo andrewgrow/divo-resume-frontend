@@ -19,5 +19,9 @@
   "passwordTooShort": "Passwort ist zu kurz",
   "passwordsDontMatch": "Passwörter stimmen nicht überein",
   "passwordConfirm": "Passwort bestätigen",
-  "register": "Registrieren"
+  "register": "Registrieren",
+  "navDashboard": "Verwaltungsübersicht",
+  "navResumes": "Lebensläufe",
+  "navJobs": "Stellen",
+  "navAccount": "Konto"
 }

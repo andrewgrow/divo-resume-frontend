@@ -1,4 +1,4 @@
-// /src/components/Dashboard.jsx
+// ./src/components/Dashboard.jsx
 
 import { useTranslation } from "react-i18next";
 import LeftMenu from "./LeftMenu.jsx";
