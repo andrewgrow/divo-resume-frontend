@@ -6,6 +6,9 @@ import './index.css'
 import App from './App.jsx'
 import {BrowserRouter} from "react-router-dom";
 import './i18n';
+import {setFaviconFromComponent} from "./utils/favicon.jsx";
+
+setFaviconFromComponent();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

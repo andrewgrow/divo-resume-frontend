@@ -1,7 +1,7 @@
 // /src/components/Navbar.jsx
 
 import { useNavigate } from "react-router-dom";
-import GiftIcon  from "./icons/GiftIcon.jsx";
+import AppIcon  from "./icons/AppIcon.jsx";
 import DownChevronIcon from "./icons/DownChevronIcon.jsx";
 
 function Navbar({ currentLang, onLangChange }) {
@@ -16,7 +16,7 @@ function Navbar({ currentLang, onLangChange }) {
                      console.log("navigate to home");
                  }}
             >
-                <GiftIcon className="w-8 h-8 text-white" />
+                <AppIcon className="w-8 h-8 text-pink-400" />
             </div>
 
             {/* Right part: language selector */}
@@ -32,7 +32,7 @@ function Navbar({ currentLang, onLangChange }) {
                     <option value="ru">RU</option>
                 </select>
                 <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">
-                    <DownChevronIcon className="w-4 h-4 text-white" />
+                    <DownChevronIcon className="w-5 h-5 text-white" />
                 </span>
             </div>
         </header>
