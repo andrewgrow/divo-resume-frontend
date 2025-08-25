@@ -16,9 +16,9 @@ function LeftMenu() {
 
     const items = useMemo(() => [
         { key: "dashboard", label: t("navDashboard"), to: "/dashboard", Icon: DashboardIcon },
-        { key: "resumes",   label: t("navResumes"),   to: "/resumes",   Icon: ResumeIcon },
-        { key: "jobs",      label: t("navJobs"),      to: "/jobs",      Icon: JobsIcon },
-        { key: "account",   label: t("navAccount"),   to: "/account",   Icon: SettingsIcon },
+        { key: "resumes",   label: t("navResumes", "Resume"),   to: "/resumes",   Icon: ResumeIcon },
+        { key: "jobs",      label: t("navJobs", "Jobs"),      to: "/jobs",      Icon: JobsIcon },
+        { key: "account",   label: t("navAccount", "Account"),   to: "/account",   Icon: SettingsIcon },
     ], [t]);
 
     const handleLogout = useCallback(() => {
@@ -26,23 +26,6 @@ function LeftMenu() {
         removeUserId();
         navigate("/login", { replace: true });
     }, [navigate]);
-
-
-    const selectIcon = useCallback(
-        (item, isActive) => {
-            const Icon = ICONS[item.key];
-            if (!Icon) return null;
-
-            const className = [
-                "w-5 h-6",
-                "shrink-0 transition-opacity",
-                isActive ? "opacity-80" : "opacity-40 group-hover:opacity-80",
-            ].join(" ");
-
-            return <Icon className={className} aria-hidden />;
-        },
-        []
-    );
 
     return (
         <aside className="h-full bg-transparent">
